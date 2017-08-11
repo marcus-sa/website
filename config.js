@@ -5,10 +5,12 @@ module.exports = {
   profilePic: 'images/8391194.jpg',
   lastName: 'S. Abildskov',
   skills: {
-    'DevOps': {
+    DevOps: {
       Unity: 10,
       Linux: 70,
-      Git: 80
+      Git: 80,
+      Nginx: 85,
+      Apache: 80
     },
     'Coding Skills': {
       React: 90,
@@ -23,6 +25,8 @@ module.exports = {
   },
   projects: [{
     title: 'Venobo',
-    groups: ['App']
+    groups: ['App'],
+    site: 'https://github.com/marcus-sa/venobo'
+    technology: ['']
   }]
 }
