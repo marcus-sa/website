@@ -16,10 +16,10 @@
                         <a class="filter btn btn-sm btn-link active" data-group="all">All</a>
                       </li>
                       <li>
-                        <a class="filter btn btn-sm btn-link" data-group="media">Media</a>
+                        <a class="filter btn btn-sm btn-link" data-group="nodejs">NodeJS</a>
                       </li>
                       <li>
-                        <a class="filter btn btn-sm btn-link" data-group="illustration">Illustration</a>
+                        <a class="filter btn btn-sm btn-link" data-group="electron">Electron</a>
                       </li>
                       <li>
                         <a class="filter btn btn-sm btn-link" data-group="video">Video</a>
@@ -31,9 +31,9 @@
                     <div id="portfolio_grid" class="portfolio-grid portfolio-masonry masonry-grid-3">
 
                       <% projects.forEach((i, k) => { %>
-                        <figure class="item" data-groups='[<%= i.groups.toString() %>]'>
-                          <a class="ajax-page-load" href='<%= k %>'>
-                            <img src="images/portfolio/1.jpg" alt="">
+                        <figure class="item" data-groups="['<%= i.groups.join("','") %>']">
+                          <a class="ajax-page-load" href="project/<%= k %>">
+                            <img src="http://lmpixels.com/demo/procard/images/portfolio/1.jpg" alt="">
                             <div>
                               <h5 class="name"><%= i.title %></h5>
                               <small>Media</small>

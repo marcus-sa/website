@@ -3,8 +3,8 @@
     <div class="ajax-page-wrapper">
         <div class="ajax-page-nav">
             <div class="nav-item ajax-page-prev-next">
-                <a class="ajax-page-load" href="projects/<%= prev %>"><i class="zmdi zmdi-chevron-left"></i></a>
-                <a class="ajax-page-load" href="projects/<%= next %>"><i class="zmdi zmdi-chevron-right"></i></a>
+                <a class="ajax-page-load" href="project/<%= prev %>"><i class="zmdi zmdi-chevron-left"></i></a>
+                <a class="ajax-page-load" href="project/<%= next %>"><i class="zmdi zmdi-chevron-right"></i></a>
             </div>
             <div class="nav-item ajax-page-close-button">
                 <a id="ajax-page-close-button" href="#"><i class="zmdi zmdi-close"></i></a>
@@ -12,7 +12,7 @@
         </div>
 
         <div class="ajax-page-title">
-            <h1><%= project.title %></h1>
+            <h1><%= title %></h1>
         </div>
 
         <div class="row">
@@ -62,12 +62,12 @@
                     <h3>Description</h3>
                 </div>
                 <ul class="project-general-info">
-                    <li><p><i class="fa fa-user"></i> Alex Smith</p></li>
-                    <li><p><i class="fa fa-globe"></i> <a href="#" target="_blank">www.project-site.com</a></p></li>
+                    <li><p><i class="fa fa-user"></i> <%= owner %></p></li>
+                    <li><p><i class="fa fa-globe"></i> <a href="<%= site %>" target="_blank"><%= site %></a></p></li>
                     <li><p><i class="fa fa-calendar"></i> 25 december, 2016</p></li>
                 </ul>
 
-                <p class="text-justify">Aliquam euismod aliquam massa, quis eleifend dui sodales vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                <p class="text-justify"><%= description %></p>
                 <!-- /Project Description -->
 
                 <!-- Technology -->
@@ -76,11 +76,9 @@
                         <h3>Technology</h3>
                     </div>
                     <ul class="tags">
-                        <li><a>HTML5</a></li>
-                        <li><a>CSS3</a></li>
-                        <li><a>jQuery</a></li>
-                        <li><a>Ajax</a></li>
-                        <li><a>PHP5</a></li>
+                      <% technology.forEach(name => { %>
+                        <li><a><%= name %></a></li>
+                      <% }) %>
                     </ul>
                 </div>
                 <!-- /Technology -->
