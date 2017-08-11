@@ -14,13 +14,14 @@ app.get('/', (req, res) => {
 
 app.get('/project/:id', (req, res) => {
   const {id} = req.params
-  const i = config.projects.indexOf(id)
 
-  res.render('project', {
-    project: config.projects[id],
-    prev: i - 1,
-    next: i + 1
+  const project = Object.assign({},
+    config.projects[id], {
+    prev: id - 1,
+    next: Number(id) + 1
   })
+
+  res.render('partials/project', project)
 })
 
 app.listen(process.env.PORT || 3000)
