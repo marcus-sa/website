@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<%- include('./partials/html.ejs') %>
+
+  <body class="material-template">
+    <!-- Loading animation -->
+    <div class="preloader">
+      <div class="preloader-animation">
+        <div class="preloader-spinner">
+        </div>
+      </div>
+    </div>
+    <!-- /Loading animation -->
+
+    <div id="page" class="page">
+      <%- include('./partials/header.ejs') %>
+
+      <div id="main" class="site-main">
+        <div class="pt-wrapper">
+          <div class="subpages">
+            <%- include('./pages/home.ejs') %>
+
+            <%- include('./pages/resume.ejs') %>
+
+            <%- include('./pages/services.ejs') %>
+
+            <%- include('./pages/projects.ejs') %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+    <%- include('./partials/scripts.ejs') %>
+  </body>
+</html>

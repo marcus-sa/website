@@ -1,0 +1,27 @@
+{
+  "name": "marcussa",
+  "version": "1.0.0",
+  "description": "marcussa",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "start": "node --trace-warnings ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcus-sa/website.git"
+  },
+  "author": "Marcus S. Abildskov <marcussa2000@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcus-sa/website/issues"
+  },
+  "homepage": "https://github.com/marcus-sa/website#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
