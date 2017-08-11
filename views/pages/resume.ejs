@@ -83,106 +83,24 @@
                   </div>
 
                   <div class="row">
-                    <!--<% for(var i = 0; i < skills.length; i++) { %>
+                    <% Object.keys(skills).forEach(t => { %>
                       <div class="col-sm-6 col-md-6 col-lg-6">
                         <div class="block">
                           <div class="block-title">
-                            <h3><%= i %></h3>
+                            <h3><%= t %></h3>
                           </div>
                         </div>
 
                         <div class="skills-info">
-                          <% skills[i].forEach(k => { %>
-                            <h4><%= skills[i][k].info %></h4>
+                          <% Object.keys(skills[t]).forEach(n => { %>
+                            <h4><%= n %></h4>
                             <div class="skill-container">
-                              <div class="skill-percentage" style="width:<%= skills[i][k].score %>%"></div>
+                              <div class="skill-percentage" style="width:<%= skills[t][n] %>%"></div>
                             </div>
                           <% }) %>
                         </div>
                       </div>
-                    <% } %>-->
-
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <div class="block">
-                        <div class="block-title">
-                          <h3>Dev<span>Ops</span></h3>
-                        </div>
-
-                        <div class="skills-info">
-                          <h4>Unity</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage" style="width:10%"></div>
-                          </div>
-
-                          <h4>Linux</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-8"></div>
-                          </div>
-
-                          <h4>Git</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-4"></div>
-                          </div>
-
-                          <h4>Print Design</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage skill-3"></div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <div class="block">
-                        <div class="block-title">
-                          <h3>Coding <span>Skills</span></h3>
-                        </div>
-
-                        <div class="skills-info">
-                          <h4>React</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage" style="width:90%"></div>
-                          </div>
-
-                          <h4>Redux</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage" style="width:95%"></div>
-                          </div>
-
-                          <h4>NodeJS</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage" style="width:85%"></div>
-                          </div>
-
-                          <h4>ES7</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage" style="width:90%"></div>
-                          </div>
-
-                          <h4>SQL</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage" style="width:70%"></div>
-                          </div>
-
-                          <h4>Electron</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage" style="width:80%"></div>
-                          </div>
-
-                          <h4>Express</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage" style="width:95%"></div>
-                          </div>
-
-                          <h4>C#</h4>
-                          <div class="skill-container">
-                            <div class="skill-percentage" style="width: 25%"></div>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
+                    <% }) %>
                   </div>
 
                   <!-- Download Resume Button -->
