@@ -8,8 +8,19 @@ app.use(express.static(path.join(__dirname, 'static')))
 
 app.set('view engine', 'ejs')
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index', config)
 })
 
-app.listen(8080, console.log)
+app.get('/project/:id', (req, res) => {
+  const {id} = req.params
+  const i = config.projects.indexOf(id)
+
+  res.render('project', {
+    project: config.projects[id],
+    prev: i - 1,
+    next: i + 1
+  })
+})
+
+app.listen(process.env.PORT || 3000)
