@@ -3,8 +3,8 @@ module.exports = {
   description: 'Hello! I’m Marcus. A 17 year old self taught programmer from Denmark.',
   social: {
     facebook: 'https://www.facebook.com/marcussa2000',
-    github: 'https://www.instagram.com/mk1ngzz',
-    instagram: 'https://github.com/marcus-sa'
+    github: 'https://github.com/marcus-sa',
+    instagram: 'https://www.instagram.com/mk1ngzz'
   },
   firstName: 'Marcus',
   profilePic: 'images/8391194.jpg',
@@ -33,13 +33,16 @@ module.exports = {
       'C#': 20
     }
   },
-  projects: [{
-    title: 'Venobo',
-    groups: ['all', 'nodejs', 'electron'],
-    description: 'A torrent streaming application with providers and TMDb written in Node.js using Electron and React',
-    site: 'https://github.com/marcus-sa/venobo',
-    images: '',
-    owner: 'Marcus S. Abildskov',
-    technology: ['NodeJS', 'Electron', 'React', 'Redux', 'Webpack']
-  }]
+  projects: {
+    venobo: {
+      title: 'Venobo',
+      groups: ['all', 'nodejs', 'electron'],
+      description: 'A torrent streaming application with providers and TMDb written in Node.js using Electron and React',
+      site: 'https://github.com/marcus-sa/venobo',
+      images: '',
+      owner: 'Marcus S. Abildskov',
+      technology: ['NodeJS', 'Electron', 'React', 'Redux', 'Webpack']
+    }
+  },
+  pages: ['home', 'projects', 'resume', 'services']
 }
